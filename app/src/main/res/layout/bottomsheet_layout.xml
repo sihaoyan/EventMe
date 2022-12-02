@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/bottom_sheet"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/back"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/backicon"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_chevron_left_solid"
+                app:iconPadding="0dp"
+                app:iconSize="40dp"
+                app:iconTint="@color/orange_theme"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/currentcardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="411dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/currentevent">
+
+                        <ImageView
+                            android:id="@+id/currenteventImage"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_marginStart="20dp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/currenteventName"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:gravity="left"
+                            android:maxLines="2"
+                            android:text="Title"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/currenteventImage"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/currenteventLocation"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:autoSizeMaxTextSize="15sp"
+                            android:autoSizeMinTextSize="7sp"
+                            android:autoSizeStepGranularity="2sp"
+                            android:autoSizeTextType="uniform"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:maxLines="2"
+                            android:text="Location"
+                            android:textSize="15sp"
+                            app:layout_constraintTop_toBottomOf="@id/currentevnetRating"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/currenteventImage" />
+
+                        <TextView
+                            android:id="@+id/currenteventDate"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="Date"
+                            android:textSize="15sp"
+                            android:gravity="left"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/currentdistance"
+                            app:layout_constraintStart_toEndOf="@+id/currenteventImage" />
+
+                        <TextView
+                            android:id="@+id/currentevnetRating"
+                            android:layout_width="200dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="left"
+                            android:text="@string/star"
+                            android:textColor="@color/orange_theme"
+                            android:textSize="17sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/currenteventImage"
+                            app:layout_constraintTop_toBottomOf="@+id/currenteventCost" />
+
+                        <TextView
+                            android:id="@+id/currenteventTime"
+                            android:layout_width="200dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="left"
+                            android:text="Time"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/currenteventImage"
+                            app:layout_constraintTop_toBottomOf="@id/currenteventDate"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <TextView
+                            android:id="@+id/currenteventCost"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="left"
+                            android:text="Cost"
+                            android:textSize="15sp"
+                            app:layout_constraintTop_toBottomOf="@id/currentsponceringOrganization"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/currenteventImage" />
+
+                        <TextView
+                            android:id="@+id/currentsponceringOrganization"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="left"
+                            android:text="Orgnization"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/currenteventName"
+                            app:layout_constraintStart_toEndOf="@+id/currenteventImage" />
+                        <TextView
+                            android:id="@+id/currentdistance"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="left"
+                            android:text="distance"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/currenteventImage"
+                            app:layout_constraintTop_toBottomOf="@id/currenteventLocation" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="409dp"
+                android:layout_height="323dp"
+                android:layout_marginBottom="83dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/back" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

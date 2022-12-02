@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "690620608675",
+    "project_id": "eventme-a8258",
+    "storage_bucket": "eventme-a8258.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690620608675:android:73ec264a44f256f23ccf16",
+        "android_client_info": {
+          "package_name": "edu.usc.eventme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690620608675-9afpck6mek1r84sjd7kf70b2ao2o8kb3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhBLjiTo4qTvBbSTR1HR6NtRirP-diL_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690620608675-9afpck6mek1r84sjd7kf70b2ao2o8kb3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

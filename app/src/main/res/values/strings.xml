@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EventMe</string>
+    <string name="guestText"><u>Continue as a guest >></u></string>
+    <string name="backicon">\u21e6</string>
+    <string name="halfstar">\u2606</string>
+    <string name="star">\u2605</string>
+    <string-array name="sortBy">
+        <item>cost</item>
+        <item>distance</item>
+        <item>date</item>
+        <item>rating</item>
+        <item>trending</item>
+    <item>alphabet</item> </string-array>
+</resources>
