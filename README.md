@@ -1,8 +1,9 @@
 # EventMe
 
-This is an instruction on how to run EventMe on an emulator.
+This is an instruction on how to run EventMe on an emulator. This is a project accomplished by Sihao Yang, Cecilia Lliu, and Lily Qi. I just copied it from the original git repository for convenience: https://github.com/Lily-Qi/EventMe. I was responsible for the map feature, including locations, markers, route planning, bottom sheet, and also some sorting functions used elsewhere.  
 
 ## Select Emulator
+We developed it on Android Studio and you can run it on Android Studio by setting up an emulator.
 If your emulator is not Pixel 2 with API 24, please follow the following steps. If you already have it, then directly jump to next session
 
 1. Select "Tools", then select "Device Manager", choose Phone with "Pixel 2", click "Next"
